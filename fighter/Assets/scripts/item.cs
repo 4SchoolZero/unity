@@ -17,7 +17,9 @@ public class item : MonoBehaviour
         
     }
     public void OnTriggerEnter(Collider other){
+            stamina.instance.UseStamina(-100);
             Destroy(gameObject);
             Instantiate(prefab, transform.position, Quaternion.identity);
+            
     }
 }
