@@ -721,7 +721,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bad0e58ccf37bd549a5576b6784f3cd4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 99159cca9ee48d54a819c864bac5df7e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -844,7 +844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -461.5, y: 200.9}
+  m_AnchoredPosition: {x: -362, y: 160}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515608780
@@ -1039,7 +1039,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 9060540714848074564, guid: 9eeb8d2702c553c418e4f448425f16da, type: 3}
-  sound: {fileID: 0}
 --- !u!114 &1708743345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1100,7 +1099,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!212 &1758833508
 SpriteRenderer:
@@ -1179,7 +1178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e4f1fe1f035d74c9325cd28113819a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 1758833507}
+  isgrounded: 1
 --- !u!1 &1854988798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,9 +1227,10 @@ GameObject:
   - component: {fileID: 2048490068}
   - component: {fileID: 2048490067}
   - component: {fileID: 2048490066}
+  - component: {fileID: 2048490069}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1242,7 +1243,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048490065}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.99999994, y: 1.0000002, z: 0.20000005}
@@ -1312,6 +1313,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &2048490069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048490065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1.0000002, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2140259348
 GameObject:
   m_ObjectHideFlags: 0
