@@ -16,10 +16,16 @@ public class movement : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.D)){
-            rb.velocity = new Vector3(5, 0, 0);
+            rb.velocity = new Vector3(7, 0, 0);
+            GetComponent<Animator>().Play("walkAnimation");
         }
         if (Input.GetKeyDown(KeyCode.A)){
-            rb.velocity = new Vector3(-5, 0, 0);
+            rb.velocity = new Vector3(-7, 0, 0);
+            GetComponent<Animator>().Play("walkAnimation");
+        }
+        if (Input.GetKeyDown(KeyCode.F)){
+            GetComponent<Animator>().Play("punchAnimation");
+            stamina.instance.UseStamina(10);
         }
         if (Input.GetKeyDown(KeyCode.Space)&& isgrounded == true){
             stamina.instance.UseStamina(20);
@@ -33,7 +39,6 @@ public class movement : MonoBehaviour
         if(collision.gameObject.tag == "ground")
         {
             isgrounded = true;
-            Debug.Log("werkt");
         }
     }
 }

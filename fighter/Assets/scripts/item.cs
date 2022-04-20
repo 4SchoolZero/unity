@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class item : MonoBehaviour
 {
+    public Animator player;
     public GameObject prefab;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class item : MonoBehaviour
     {
     }
     public void OnTriggerEnter(Collider other){
+            player.Play("pickupAnimation");
             stamina.instance.UseStamina(-100);
             Destroy(gameObject);
             Instantiate(prefab, transform.position, Quaternion.identity);
