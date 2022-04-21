@@ -19,11 +19,10 @@ public class Health : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
-        {
-            DamagePlayer(10);
-        }
+            {
+                DamagePlayer(10);
+            }
     }
-
     public void DamagePlayer(int damage)
     {
         curHealth -= damage;
