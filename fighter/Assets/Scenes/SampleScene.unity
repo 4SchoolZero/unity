@@ -362,6 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHealth: 0
   maxHealth: 100
+  triggered: 0
   enemy: {fileID: 0}
   healthBar: {fileID: 823352075}
 --- !u!1 &185623736
@@ -1113,7 +1114,7 @@ GameObject:
   - component: {fileID: 1148081304}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

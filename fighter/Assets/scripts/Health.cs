@@ -6,7 +6,9 @@ public class Health : MonoBehaviour
 {
     public int curHealth = 0;
     public int maxHealth = 100;
+    public bool triggered;
     public GameObject enemy;
+    
 
     public HealthBar healthBar;
 
@@ -18,11 +20,20 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && triggered)
             {
                 DamagePlayer(10);
+                triggered = false;
             }
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            triggered = true;
+        }
+    }
+
     public void DamagePlayer(int damage)
     {
         curHealth -= damage;
