@@ -32,7 +32,9 @@ public class movement : MonoBehaviour
             rb.velocity = new Vector3(0, 5, 0);
             isgrounded = false;
         }
+        
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
